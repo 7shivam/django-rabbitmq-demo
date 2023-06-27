@@ -14,5 +14,7 @@ Testing
 2). you can also use the curl command, curl -X POST -d "message=Hello, RabbitMQ!" http://localhost:8000/send/
 
 
+dockerimage - https://hub.docker.com/repository/docker/zabakar/djangorabbitmq/general
+
 
 
