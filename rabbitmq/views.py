@@ -18,7 +18,7 @@ def send_to_rabbitmq(request):
 def send_message_to_rabbitmq(message):
     connection = pika.BlockingConnection(pika.ConnectionParameters('rabbitmq'))
     channel = connection.channel()
-    channel.queue_declare(queue='shivam-test-queue')
+    channel.queue_declare(queue='shivam-test-queue', durable=True)
     channel.basic_publish(exchange='', routing_key='shivam-test-queue', body=message)
     connection.close()
     print("Sent message to RabbitMQ:", message)
