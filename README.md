@@ -2,7 +2,8 @@
 
 How to run this project?
 1). First run the rabbitmq container by the following command
-docker run -itd --rm --name rabbitmq -p 5672:5672 -p 15672:15672 --net=my-network rabbitmq:3-management
+docker run -itd --rm --name rabbitmq -p 5672:5672 -p 15672:15672 --net=my-network -v /var/lib/rabbitmq:/var/lib/rabbitmq --hostname rabbitmq rabbitmq:3-management
+
 
 2). second run the django container by the following command
 docker run -itd -p 8000:8000 --net=my-network djangorabbitmq
